@@ -2,11 +2,13 @@ import time
 import testit
 
 
+@testit.step('Generate full logs')
 def generate_logs() -> str:
     time.sleep(1)
     return "some strings"
 
 
+@testit.step('Generate empty logs')
 def generate_empty_logs() -> str:
     time.sleep(1)
     return ""

@@ -3,16 +3,19 @@ import time
 import testit
 
 
+@testit.step('Enter login', 'Enter login to textbox')
 def set_login(login: str):
     time.sleep(1)
     pass
 
 
+@testit.step('Enter password')
 def set_password(password: str):
     time.sleep(1)
     assert password == "Qwerty123"
 
 
+@testit.step
 def click_login_button():
     time.sleep(1)
     pass
