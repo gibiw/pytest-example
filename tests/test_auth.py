@@ -5,6 +5,7 @@ import testit
 
 @testit.step('Enter login', 'Enter login to textbox')
 def set_login(login: str):
+    testit.addAttachments(data=login, is_text=True, name='login.txt')
     time.sleep(1)
     pass
 

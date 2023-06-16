@@ -21,6 +21,7 @@ def generate_empty_logs() -> str:
 @testit.workItemIds("1523")
 def test_log_success():
     logs = generate_logs()
+    testit.addMessage(logs)
     assert len(logs) > 0
 
 
@@ -30,5 +31,6 @@ def test_log_success():
 @testit.labels("failed", "logs")
 @testit.link(url='https://google.com', title='Bug-321', description='Logs bug', type='Issue')
 def test_log_failed():
+    testit.addLink(url="http://amazon.com/", title="Test page")
     logs = generate_empty_logs()
     assert len(logs) > 0
